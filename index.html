@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dtyaaa - Dashboard</title>
+    <link rel="icon" href="./assets/logo.png">
+    <link rel="stylesheet" href="./style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <style>
+   body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #222;
+            color: #ffffff;
+        }
+        .hero {
+            background-color: #333;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ff007a;
+        }
+        .hero p {
+            font-size: 1rem;
+            color: #cccccc;
+            margin: 1rem 0;
+        }
+        .hero button {
+            background-color: transparent;
+            color: var(--purple);
+            padding: 0.75rem 1.5rem;
+            border: 3px solid var(--purple);
+            font-weight: 600;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+        .hero button:hover {
+            background-color: var(--purple);
+            border: 3px solid var(--purple);
+            color: #222;
+            transform: translateY(-5px);
+        }
+        .services, .portfolio, .contact {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .services h2, .portfolio h2, .contact h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+        .services p, .portfolio p, .contact p {
+            font-size: 1rem;
+            color: #cccccc;
+            margin-bottom: 2rem;
+        }
+        .service-item {
+            margin: 2rem 0;
+        }
+        .service-item i {
+            font-size: 2rem;
+            color: #ff007a;
+            margin-bottom: 1rem;
+        }
+        .portfolio img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact form input, .contact form textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border: none;
+            border-radius: 0.5rem;
+            background-color: #333333;
+            color: #ffffff;
+        }
+        .contact form button {
+            background-color: #ff007a;
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+        .footer {
+            background-color: #1a1a1a;
+            padding: 2rem 2rem;
+            text-align: center;
+            color: #cccccc;
+        }
+        .portfolio-1,
+        .portfolio-2,
+        .portfolio-3,
+        .portfolio-4,
+        .portfolio-5,
+        .portfolio-6 {
+            transition: .3s ease;
+            cursor: pointer;
+        }
+        .portfolio-1:hover,
+        .portfolio-2:hover,
+        .portfolio-3:hover,
+        .portfolio-4:hover,
+        .portfolio-5:hover,
+        .portfolio-6:hover {
+            transform: scale(1.1);
+        }
+        .carousel {
+            position: relative;
+            overflow: hidden;
+        }
+        .carousel-item {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .active {
+            display: block;
+            opacity: 1;
+        }
+        .fade {
+            opacity: 0;
+        }
+  </style>
+</head>
+
+<body style="background: #222;">
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <div class="title-dashboard shadow">
+        <h1 id="type" class="title-p fw-bold mt-3"></h1>
+    </div>
+
+  <section class="hero flex flex-col items-center mt-5">
+   <div class="flex items-center w-full max-w-6xl px-8">
+    <div class="w-1/3 text-left" style="margin-right: 220px;">
+     <h1>
+      i'm a Junior
+      <span class="text-pink-500">
+       FullStack Developer.
+      </span>
+     </h1>
+     <p>
+      I am a newbie full stack developer with advance development skills in webite. Advance using React, Laravel, Angular, ASP .Net, and Java Springboot.
+     </p>
+     <button onclick="window.location.href='#getintouch';">
+      Hire Me
+     </button>
+    </div>
+    <div class="w-1/2 flex justify-center">
+     <img alt="Professional Graphic Designer" style="border: 6px solid var(--purple);" height="320" src="./assets/profiles.jpeg" width="320" class="rounded-full shadow"/>
+    </div>
+   </div>
+  </section>
+  <section class="services">
+   <h2 style="color: var(--purple);">
+    My Services
+   </h2>
+   <p style="padding: 0 80px;">
+    My services is very quick work process. Honest and Efficiency is number 1 in my mind! With my skills. Let's hire me to get your project done.
+
+   </p>
+   <div class="flex justify-between px-8">
+    <div class="service-item text-center">
+     <i class="fas fa-paint-brush">
+     </i>
+     <h3 class="text-xl font-bold mt-2">
+      UI / UX Design
+     </h3>
+     <p>
+      User Interface & User Experience design using figma and other ui design tools.
+     </p>
+    </div>
+    <div class="service-item text-center">
+     <i class="fas fa-mobile-alt">
+     </i>
+     <h3 class="text-xl font-bold mt-2">
+      Responsive Website
+     </h3>
+     <p>
+      Development website responsive using Tailwind CSS / Bootstrap CSS / SASS / CSS
+     </p>
+    </div>
+    <div class="service-item text-center">
+        <i class="fas fa-pencil-alt">
+     </i>
+     <h3 class="text-xl font-bold mt-2">
+      Website Development
+     </h3>
+     <p>
+      Full Stack Website Development using React, Laravel, Angular, Java, Springboot, ASP.Net
+     </p>
+    </div>
+   </div>
+  </section>
+  <section class="portfolio">
+   <h1 class="mb-3 fw-bold" style="font-size: 2rem;">Portfolio</h1>
+   <p>
+    These are my experience / my recent projects. developed with myself and using my programming skills.
+   </p>
+   <div class="grid grid-cols-3 gap-4 px-8">
+    <img class="portfolio-1 alt="Abstract colorful painting" height="200" src="./assets/Screenshot (16).png" width="300" onclick="window.location.href='https://daftar-hadir-stkip.vercel.app/';"/>
+    <img class="portfolio-2" alt="Portrait of a person with blue lighting" height="200" src="./assets/Screenshot (17).png" width="300" onclick="window.location.href='https://sipermawaupi.vercel.app/';"/>
+    <img class="portfolio-3" alt="Graphic design of a website on a computer screen" height="200" src="./assets/Screenshot (19).png" width="300" onclick="window.location.href='https://pandoraqr.vercel.app/';"/>
+    <img class="portfolio-4" alt="Close-up of a colorful abstract painting" height="200" src="./assets/Screenshot (21).png" width="300" onclick="window.location.href='https://scdroastery.vercel.app/';"/>
+    <img class="portfolio-5" alt="Abstract art with various colors and shapes" height="200" src="./assets/Screenshot (22).png" width="300" onclick="window.location.href='https://fibonaccies.vercel.app/';"/>
+    <img class="portfolio-6" alt="Abstract art with various colors and shapes" height="200" src="./assets/Screenshot (23).png" width="300" onclick="window.location.href='https://6d0a297f-bd41-441f-a3e6-082a87e30dd9-00-3ct5896mmtr5l.riker.replit.dev/';"/>
+   </div>
+  </section>
+  <section class="contact">
+   <h2>
+    My Skills
+   </h2>
+    <div class="flex gap-5 m-4 justify-center">
+        <img src="./assets/html.png" style="mix-blend-mode: screen;" height="100" width="100" alt="html">
+        <img src="./assets/css.png" style="mix-blend-mode: screen;" height="100" width="100" alt="css">
+        <img src="./assets/js.png" style="mix-blend-mode: screen;" height="30" width="100" alt="js">
+        <img src="./assets/react.png" style="mix-blend-mode: screen;" height="60" width="100" alt="react">
+        <img src="./assets/bootstrap.png" style="mix-blend-mode: screen;" height="80" width="140" alt="bootstrap">
+        <img src="./assets/vue.png" style="mix-blend-mode: screen;" height="80" width="100" alt="bootstrap">
+    </div>
+    <div class="flex gap-5  m-4 justify-center">
+        <img src="./assets/tailwind.png" style="mix-blend-mode: screen;" height="80" width="120" alt="tailwind">
+        <img src="./assets/quasar.png" style="mix-blend-mode: screen;" height="80" width="80" alt="tailwind">
+        <img src="./assets/laravel.png" style="mix-blend-mode: screen;" height="80" width="80" alt="tailwind">
+        <img src="./assets/php.png" style="mix-blend-mode: screen;" height="80" width="125" alt="tailwind">
+        <img src="./assets/java.png" style="mix-blend-mode: screen;" height="80" width="80" alt="tailwind">
+        <img src="./assets/nextjs.png" style="mix-blend-mode: screen; border-radius: 50%;" height="80" width="80" alt="tailwind">
+        <img src="./assets/angular.png" style="mix-blend-mode: screen; border-radius: 50%;" height="80" width="80" alt="tailwind">
+    </div>
+    <h2 class="mt-5" style="margin-top: 50px;">
+        My Location
+    </h2>
+   <div class="mt-8 flex justify-center px-8">
+    <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=670&amp;height=400&amp;hl=en&amp;q=Yana Jaya Online&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://sprunkin.com">Sprunki Mods</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style></div>
+   </div>
+   <h2 class="mt-5" id="getintouch">Get in touch</h2>
+   <div class="flex justify-center gap-4">
+    <i class="fa-brands fa-instagram icons" onclick="window.location.href='https://instagram.com/raredtyaa';"></i>
+    <i class="fa-brands fa-discord icons" onclick="alert('sorry : this feature is under maintenance !.')"></i>
+    <i class="fa-brands fa-github icons" onclick="window.location.href='https://github.com/hgadtya';"></i>
+    <i class="fa-brands fa-whatsapp icons" onclick="window.location.href='https://wa.me/6283827776852';"></i>
+   </div>
+  </section>
+  <footer class="footer">
+   <p>
+    Dtyaaa | All rights reserved. © 2024
+   </p>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./script/script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+
+</html>
